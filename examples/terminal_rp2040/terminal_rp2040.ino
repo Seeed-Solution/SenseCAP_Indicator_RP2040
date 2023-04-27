@@ -7,7 +7,7 @@
 #include <SPI.h>
 #include <SD.h>
 #include <PacketSerial.h>
-#include <Adafruit_AHTX0.h>
+#include "AHT20.h"
 
 #define DEBUG 0
 
@@ -24,7 +24,7 @@
 --------------------------------------------------------\n\
 "
 
-Adafruit_AHTX0 AHT;
+AHT20 AHT;
 SensirionI2CSgp40 sgp40;
 SensirionI2CScd4x scd4x;
 VOCGasIndexAlgorithm voc_algorithm;
@@ -33,6 +33,8 @@ PacketSerial myPacketSerial;
 
 String SDDataString = "";
 
+
+//Type of transfer packet
 
 #define PKT_TYPE_SENSOR_SCD41_CO2 0XB2
 #define PKT_TYPE_SENSOR_SHT41_TEMP 0XB3
@@ -109,19 +111,18 @@ void sensor_aht_init(void) {
 }
 
 void sensor_aht_get(void) {
-  sensors_event_t humi, temp;
 
-  int ret = AHT.getEvent(&humi, &temp);
+  float humi, temp;
+
+  int ret = AHT.getSensor(&humi, &temp);
   if (ret)  // GET DATA OK
   {
-    temperature = temp.temperature;
-    humidity = humi.relative_humidity;
-    Serial.print("Temperature:");
-    Serial.print(temperature);
-    Serial.print("\t");
-    Serial.print("Humidity:");
-    Serial.println(humidity);
-
+    Serial.print("humidity: ");
+    Serial.print(humi * 100);
+    Serial.print("%\t temerature: ");
+    Serial.println(temp);
+    temperature = temp;
+    humidity = humi * 100;
     compensationT = static_cast<uint16_t>((temperature + 45) * 65535 / 175);
     compensationRh = static_cast<uint16_t>(humidity * 65535 / 100);
   } else  // GET DATA FAIL
@@ -305,22 +306,21 @@ void sensor_scd4x_get(void) {
 
 /************************ beep ****************************/
 
-void beep_init(void) {
-  pinMode(19, OUTPUT);
-}
-void beep_on(void) {
-  int n = 50;
-  while (n--) {
-    digitalWrite(19, HIGH);
-    delay(1);
-    digitalWrite(19, LOW);
-    delay(1);
-  }
-}
+#define Buzzer 19  //Buzzer GPIO
 
+void beep_init(void) {
+  pinMode(Buzzer, OUTPUT);
+}
 void beep_off(void) {
   digitalWrite(19, LOW);
 }
+void beep_on(void) {
+  analogWrite(Buzzer, 127);
+  delay(50);
+  analogWrite(Buzzer, 0);
+}
+
+
 
 /************************ grove  ****************************/
 
@@ -448,6 +448,7 @@ void loop() {
     sensor_aht_get();
     sensor_sgp40_get();
     sensor_scd4x_get();
+    grove_adc_get();
 
     if (sd_init_flag) {
       File dataFile = SD.open("datalog.csv", FILE_WRITE);
