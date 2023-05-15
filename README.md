@@ -30,17 +30,6 @@ Demos depends on the following packages.
 - `tvoc` Demonstrates how to collect built-in SGP40 sensor data.
 
 
-## buzzer
-
-The built-in buzzer of SenseCAP Indicator is a passive buzzer, meaning that it requires an AC signal(PWM) to trigger and output a sound, you can generate various tones and effects.This example demonstrates how to use the buzzer.
-
-
-## co2
-
-SenseCAP Indicator (D1S/D1Pro Version)has a built-in SCD41 sensor, which can detect the CO2 value with a range of 0-40000ppm.
-
-
-
 ## **SenseCAP Indicator Abstract**
 
 
