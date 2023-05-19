@@ -11,7 +11,7 @@
 
 #define DEBUG 0
 
-#define VERSION "v1.0.0"
+#define VERSION "v1.0.1"
 
 #define SENSECAP "\n\
    _____                      _________    ____         \n\
