@@ -2,7 +2,7 @@
 
 This project is mainly some demonstration demos of RP2040, developed based on the arduino environment.
 
-> Relevant: [SenseCAP Indicator RP2040](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)
+> Relevant: [SenseCAP Indicator ESP32](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)
 
 
 ## Arduino environment
