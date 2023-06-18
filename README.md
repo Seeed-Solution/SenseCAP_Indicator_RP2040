@@ -1,9 +1,28 @@
+<p align="center">
+  <a href="https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#flash-by-arduino-ide">
+    <img src="https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png" width="auto" height="auto" alt="SenseCAP">
+  </a>
+</p>
+
+<div align="center">
+
 # **SenseCAP Indicator RP2040**
 
 This project is mainly some demonstration demos of RP2040, developed based on the arduino environment.
 
-> Relevant: [SenseCAP Indicator ESP32](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)
+</div>
 
+<p align="center">
+  <a href="https://raw.githubusercontent.com/seeed-solution/SenseCAP_Indicator_RP2040/main/LICENSE">
+    <img src="https://img.shields.io/github/license/seeed-solution/SenseCAP_Indicator_RP2040" alt="license">
+  </a>
+  <a href="https://github.com/seeed-solution/SenseCAP_Indicator_RP2040/releases">
+    <img src="https://img.shields.io/github/v/release/seeed-solution/SenseCAP_Indicator_RP2040?include_prereleases&color=blueviolet" alt="release">
+  </a>
+    <img src="https://img.shields.io/github/repo-size/seeed-solution/SenseCAP_Indicator_RP2040" alt="repo-size">
+</p>
+
+> Relevant: [SenseCAP Indicator ESP32](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32) | [Wiki](https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#rp2040-development-tool)
 
 ## Arduino environment
 
@@ -40,10 +59,9 @@ The device comes two Grove interfaces, which supports ADC and I2C transmission p
 
 SenseCAP Indicator is a fully open source powerful IoT development platform for developers. One-stop ODM Fusion service is also available for customization and quick scale-up.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"/></div>
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"/></div>
 
-
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html?" target="_blank"><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%202.png" border="0" /></a></p>
+<p align="center" style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html" ><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%202.png" border="0" /></a></p>
 
 
 
@@ -60,7 +78,7 @@ Integrated Semtech SX1262 LoRa chip (optional) for connecting LoRa devices to po
 - **Fully Open Source Platform** 
 Leverage the extensive ESP32 and Raspberry Pi open source ecosystem for infinite application possibilities.
 - **Fusion ODM Service Available** 
-Seeed Studio also provides one-stop ODM service for quick customization and scale-up to meet various needs.(please contact iot@seeed.cc)
+Seeed Studio also provides one-stop ODM service for quick customization and scale-up to meet various needs. (please contact iot@seeed.cc)
 
 
 
