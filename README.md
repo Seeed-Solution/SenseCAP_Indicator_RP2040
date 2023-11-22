@@ -29,12 +29,22 @@ This project is mainly some demonstration demos of RP2040, developed based on th
 Demos depends on the following packages.
 
 - [Serial communication protocol](https://github.com/bakercp/PacketSerial)
+- [Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core)
 - [SGP40 TVOC sensor library](https://github.com/Sensirion/arduino-i2c-sgp40)
 - [Transfer index library: Sensirion Gas Index Algorithm](https://github.com/Sensirion/arduino-gas-index-algorithm)
 - [SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
 - [AHT20 temperature and humidity sensor libray](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20)
-- [Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core)
 
+To search it in Arduino IDE, you can click `Tools` -> `Manage Libraries...` and search the name of the library.
+
+|Library|Version|Name|
+|---|---|---|
+|Sensirion Arduino Core library|0.6.0|Sensirion Core|
+|Serial communication protocol|1.4.0|PacketSerial|
+|SGP40 TVOC sensor library|0.1.0|Sensirion I2C SGP40|
+|SCD41 CO2 sensor library|0.4.0|Sensirion I2C SCD4x|
+|Transfer index library: Sensirion Gas Index Algorithm|3.2.2|Sensirion Gas Index Algorithm|
+|AHT20 temperature and humidity sensor libray|1.0.1|Seeed_Arduino_AHT20|
 
 ## Example Layout
 

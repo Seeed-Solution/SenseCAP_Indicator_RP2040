@@ -1,7 +1,6 @@
 #include <Arduino.h>
 #include <SensirionI2CSgp40.h>
 #include <SensirionI2CScd4x.h>
-#include <Adafruit_Sensor.h>
 #include <VOCGasIndexAlgorithm.h>
 #include <Wire.h>
 #include <SPI.h>
