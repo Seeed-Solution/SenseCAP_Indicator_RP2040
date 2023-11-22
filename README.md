@@ -37,7 +37,7 @@ Demos depends on the following packages.
 
 To search it in Arduino IDE, you can click `Tools` -> `Manage Libraries...` and search the name of the library.
 
-|Library|Version|Name|
+|Packages|Version|Name|
 |---|---|---|
 |Sensirion Arduino Core library|0.6.0|Sensirion Core|
 |Serial communication protocol|1.4.0|PacketSerial|
